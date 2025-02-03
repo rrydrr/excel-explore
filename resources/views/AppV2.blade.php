@@ -30,9 +30,9 @@
             <h1 class="text-lg font-bold">Halow ini testing ajah {{ $test }}</h1>
             {{-- <h1 class="text-lg font-light">V2</h1> --}}
             <a
-            href="{{ route('AppV2') }}"
+            href="{{ route('App') }}"
             class="text-lg font-light hover:font-normal"
-                >V2
+                >V1
             </a>
         </div>
         <div class="mt-10 mb-5 overflow-x-auto">
@@ -46,7 +46,7 @@
                         <th class="px-4 py-2 font-normal border text-md">Credit Score</th>
                     </tr>
                 </thead>
-                <tbody>
+                {{-- <tbody>
                     @foreach ($candidates as $candidate)
                         <tr>
                             <td class="px-4 py-2 font-normal border text-md">{{ $candidate->name }}</td>
@@ -56,7 +56,7 @@
                             <td class="px-4 py-2 font-normal border text-md">{{ round(convertToRange($candidate->creditScore)) }}</td>
                         </tr>
                     @endforeach
-                </tbody>
+                </tbody> --}}
             </table>
         </div>
         <a
