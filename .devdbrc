@@ -1,0 +1,6 @@
+[
+  {
+    "type": "sqlite",
+    "path": "c:\\laragon\\www\\excel-explore\\database\\database.sqlite"
+  }
+]
