@@ -43,4 +43,4 @@ To install this project, follow these steps:
 
 ## Versions
 
-v1 : Basic Functionalities
+v1 : Basic functionalities including importing, and exporting data from excel files
