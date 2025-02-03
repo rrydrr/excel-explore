@@ -31,7 +31,7 @@
             {{-- <h1 class="text-lg font-light">V2</h1> --}}
             <a
             href="{{ route('App') }}"
-            class="text-lg font-light hover:font-normal"
+            class="text-lg font-normal hover:font-bold"
                 >V1
             </a>
         </div>
@@ -39,24 +39,55 @@
             <table class="w-full table-auto">
                 <thead>
                     <tr>
-                        <th class="px-4 py-2 font-normal border text-md">Name</th>
-                        <th class="px-4 py-2 font-normal border text-md">Net Worth</th>
-                        <th class="px-4 py-2 font-normal border text-md">Income</th>
-                        <th class="px-4 py-2 font-normal border text-md">Debt</th>
-                        <th class="px-4 py-2 font-normal border text-md">Credit Score</th>
+                        <th class="px-4 py-2 font-normal border text-md" rowspan="3">No.</th>
+                        <th class="px-4 py-2 font-normal border text-md" rowspan="3">No SBG</th>
+                        <th class="px-4 py-2 font-normal border text-md" rowspan="3">Nama Nasabah</th>
+                        <th class="px-4 py-2 font-normal border text-md" rowspan="3">OVD</th>
+                        <th class="px-4 py-2 font-normal border text-md" rowspan="3">Item</th>
+                        <th class="px-4 py-2 font-normal border text-md" rowspan="3">Deskripsi BJ</th>
+                        <th class="px-4 py-2 font-normal border text-md" colspan="7">Unit</th>
+                        <th class="px-4 py-2 font-normal border text-md" colspan="9">Internal Audit</th>
+                        <th class="px-4 py-2 font-normal border text-md" colspan="3">Variance</th>
+                    </tr>
+                    <tr>
+                        <th class="px-4 py-2 font-normal border text-md" colspan="3">Berat</th>
+                        <th class="px-4 py-2 font-normal border text-md" colspan="4">Karat</th>
+                        <th class="px-4 py-2 font-normal border text-md" colspan="3">Berat</th>
+                        <th class="px-4 py-2 font-normal border text-md" colspan="4">Karat</th>
+                        <th class="px-4 py-2 font-normal border text-md" rowspan="2">PIC</th>
+                        <th class="px-4 py-2 font-normal border text-md" rowspan="2">Jenis Emas</th>
+                        <th class="px-4 py-2 font-normal border text-md" rowspan="2">Berat</th>
+                        <th class="px-4 py-2 font-normal border text-md" colspan="2">Karat</th>
+                    </tr>
+                    <tr>
+                        <th class="px-4 py-2 font-normal border text-md">Kotor</th>
+                        <th class="px-4 py-2 font-normal border text-md">Batu</th>
+                        <th class="px-4 py-2 font-normal border text-md">Emas</th>
+                        <th class="px-4 py-2 font-normal border text-md">Vol</th>
+                        <th class="px-4 py-2 font-normal border text-md">Density</th>
+                        <th class="px-4 py-2 font-normal border text-md">AK</th>
+                        <th class="px-4 py-2 font-normal border text-md">BJ</th>
+                        <th class="px-4 py-2 font-normal border text-md">Kotor</th>
+                        <th class="px-4 py-2 font-normal border text-md">Batu</th>
+                        <th class="px-4 py-2 font-normal border text-md">Emas</th>
+                        <th class="px-4 py-2 font-normal border text-md">Vol</th>
+                        <th class="px-4 py-2 font-normal border text-md">Density</th>
+                        <th class="px-4 py-2 font-normal border text-md">AK</th>
+                        <th class="px-4 py-2 font-normal border text-md">BJ</th>
+                        <th class="px-4 py-2 font-normal border text-md">AK</th>
+                        <th class="px-4 py-2 font-normal border text-md">BJ</th>
                     </tr>
                 </thead>
-                {{-- <tbody>
-                    @foreach ($candidates as $candidate)
+                <tbody>
+                    @php
+                        $i = 1;
+                    @endphp
+                    @foreach ($candidates as $nasabah)
                         <tr>
-                            <td class="px-4 py-2 font-normal border text-md">{{ $candidate->name }}</td>
-                            <td class="px-4 py-2 font-normal border text-md">{{ 'Rp ' . number_format($candidate->netWorth, 0, ',', '.') }}</td>
-                            <td class="px-4 py-2 font-normal border text-md">{{ 'Rp ' . number_format($candidate->income, 0, ',', '.') }}</td>
-                            <td class="px-4 py-2 font-normal border text-md">{{ 'Rp ' . number_format($candidate->debt, 0, ',', '.') }}</td>
-                            <td class="px-4 py-2 font-normal border text-md">{{ round(convertToRange($candidate->creditScore)) }}</td>
+                            <td class="px-4 py-2 font-normal text-center border text-md">{{ $i++ }}</td>
                         </tr>
                     @endforeach
-                </tbody> --}}
+                </tbody>
             </table>
         </div>
         <a
